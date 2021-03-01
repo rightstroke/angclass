@@ -1,0 +1,33 @@
+<div *ngIf="cities.length>0">
+    <table border="1">
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Country Name</td>
+            <td>Remove</td>
+        </tr>
+        <tr *ngFor="let c of cities">
+            <td>{{c.id}}</td>
+            <td>{{c.cName}}</td>
+            <td>{{c.countryName}}</td>
+            <td><button class="btn btn-danger" (click)="handleRemoveCity(c.id)">Remove</button></td>
+        </tr>
+    </table>
+</div>
+<div>
+    <div>
+        <div>
+            <div>ID</div>
+            <div><input type="text" [value]="city.id" #ids/></div>
+        </div>
+        <div>
+            <div>City Name</div>
+            <div><input type="text" [value]="city.cName" #cname/></div>
+        </div>
+        <div>
+            <div>Country Name</div>
+            <div><input type="text" [value]="city.countryName" #countryName/></div>
+        </div>
+        <button (click)="handleAddCity(ids.value,cname.value,countryName.value)">Add City</button>
+    </div>
+</div>
