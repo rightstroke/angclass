@@ -18,7 +18,7 @@ export class AppComponent {
   myCities:City[]= [];
 
   selectedCity:City;
-  
+
   //Dependency Injection of Service
   constructor(private cService:CalcService) {
     setTimeout(() => {
@@ -67,5 +67,7 @@ export class AppComponent {
       }
     });
   }
- 
+  
+
+  //**dummy data//
 }
