@@ -9,7 +9,7 @@ import City from 'src/app/model/city';
 export class GridComponent implements OnInit {
 
   @Input("ipc1")
-  public cities:City[] = []
+  public cities:City[] = [];
 
   @Output("eACty")
   public eAddCity:EventEmitter<City> = new EventEmitter<City>();

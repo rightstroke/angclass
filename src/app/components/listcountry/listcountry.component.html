@@ -1,0 +1,10 @@
+<div>
+    <h2>My Child Component</h2>
+    <div>        
+      <app-grid 
+                [ipc1]="myCities" 
+                (eACty)="handleAddCity($event)"
+                (eRCty)="handleRemoveCity($event)">
+      </app-grid>
+    </div>
+  </div>
