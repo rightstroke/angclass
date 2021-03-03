@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IntrabankftComponent } from '../../components/intrabankft/intrabankft.component';
+import { FormsModule } from '@angular/forms';
 
 
 
 @NgModule({
   declarations: [IntrabankftComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class FundstransferModule { }
