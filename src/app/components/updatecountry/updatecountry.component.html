@@ -1,1 +1,18 @@
-<p>updatecountry works!</p>
+<div>
+<p>Update and View City Details</p>
+<div>
+    <div>
+        <div>ID</div>
+        <div><input type="text" [(ngModel)]="city.id" #ids/></div>
+    </div>
+    <div>
+        <div>City Name</div>
+        <div><input type="text" [(ngModel)]="city.cName" #cname/></div>
+    </div>
+    <div>
+        <div>Country Name</div>
+        <div><input type="text" [(ngModel)]="city.countryName" #countryName/></div>
+    </div>
+    <button (click)="goBack()">GoBack</button>
+</div>
+</div>

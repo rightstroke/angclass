@@ -11,6 +11,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { ListcountryComponent } from './components/listcountry/listcountry.component';
 import { UpdatecountryComponent } from './components/updatecountry/updatecountry.component';
+import { ExpPipe } from './components/pipes/exp.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UpdatecountryComponent } from './components/updatecountry/updatecountry
     DashboardComponent,
     PagenotfoundComponent,
     ListcountryComponent,
-    UpdatecountryComponent
+    UpdatecountryComponent,
+    ExpPipe
   ],
   imports: [
     BrowserModule,

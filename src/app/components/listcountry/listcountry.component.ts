@@ -12,6 +12,11 @@ export class ListcountryComponent implements OnInit {
 
   myCities:City[]= [];
 
+  myCities2:City[] = [
+    { id: 1, cName: "Chennai", countryName: "India" },
+    { id: 4, cName: "Singapore City", countryName: "Singapore-APAC" }
+  ];
+
 
   constructor(private countryService:CountryService) { 
     this.myCities = countryService.getCountries();

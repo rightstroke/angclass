@@ -10,8 +10,8 @@ import { Auth } from '../../model/auth';
 })
 export class LoginComponent implements OnInit {
 
-  uid:string="";
-  pwd:string="";
+  uid:string="siva1";
+  pwd:string="siva1";
 
   auth:Auth;
 

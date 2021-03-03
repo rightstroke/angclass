@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import City from 'src/app/model/city';
 
 @Component({
@@ -6,31 +6,43 @@ import City from 'src/app/model/city';
   templateUrl: './grid.component.html',
   styleUrls: ['./grid.component.css']
 })
-export class GridComponent implements OnInit {
+export class GridComponent implements OnInit, OnChanges {
 
   @Input("ipc1")
-  public cities:City[] = [];
+  public cities: City[] = [];
 
   @Output("eACty")
-  public eAddCity:EventEmitter<City> = new EventEmitter<City>();
+  public eAddCity: EventEmitter<City> = new EventEmitter<City>();
 
 
   @Output("eRCty")
-  public eRemoveCity:EventEmitter<number> = new EventEmitter<number>();
+  public eRemoveCity: EventEmitter<number> = new EventEmitter<number>();
 
-  public city:City = new City(0,'','');;
+  public city: City = new City(0, '', '');;
 
   constructor() { }
+  ngOnChanges(changes: SimpleChanges): void {
+
+    for (let p in changes) {
+
+      let control = changes[p];
+      console.log(p);
+      console.log(control.previousValue);
+      console.log(control.currentValue);
+      console.log("#############")
+    }
+
+  }
 
   ngOnInit(): void {
   }
 
-  handleAddCity(ids:number,cName:string,countryName:string) {
-    this.city = new City(ids,cName,countryName);
+  handleAddCity(ids: number, cName: string, countryName: string) {
+    this.city = new City(ids, cName, countryName);
     this.eAddCity.emit(this.city);
   }
 
-  handleRemoveCity(ids:number) {
+  handleRemoveCity(ids: number) {
     this.eRemoveCity.emit(ids);
   }
 

@@ -1,5 +1,10 @@
 <div>
+    <div>{{uid | uppercase}}</div>
+    <div>{{dte}}</div>
+    <div>{{dte | date:'MM/dd/yyyy' | lowercase}}</div>
+    <div>{{inp | pipeexp:3}}</div>
     <div>
         <router-outlet></router-outlet>
+        <button (click)="updatecity()">AddNCTY</button>
     </div>
 </div>
