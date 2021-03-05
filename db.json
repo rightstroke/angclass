@@ -1,0 +1,103 @@
+{
+    "auth": [
+      {
+        "id": 1,
+        "userid": "siva",
+        "password": "siva@12345"
+      },
+      {
+        "id": 2,
+        "userid": "test",
+        "password": "test@12345"
+      },
+      {
+        "id": 3,
+        "userid": "admin",
+        "password": "admin@12345"
+      },
+      {
+        "id": 4,
+        "userid": "siva1",
+        "password": "siva1"
+      }
+    ],
+    "city": [
+      {
+        "id": "5",
+        "cName": "Vellore",
+        "countryName": "India"
+      }
+    ],
+    "posts": [
+      {
+        "id": 1,
+        "title": "json-server",
+        "author": "typicode",
+        "cost": 300
+      },
+      {
+        "id": 2,
+        "title": "Manager",
+        "author": "Someone",
+        "cost": 500
+      },
+      {
+        "id": 3,
+        "title": "Wings of Fire",
+        "author": "Mr APJ",
+        "cost": 999
+      },
+      {
+        "id": 4,
+        "title": "Udaiyar",
+        "author": "Kalki",
+        "cost": 500
+      },
+      {
+        "id": "0.5143152602947321",
+        "author": "author",
+        "title": "titleFri Mar 05 2021 00:06:39 GMT+0530 (India Standard Time)",
+        "cost": 100.43622519250246
+      },
+      {
+        "id": "0.3314515020977715",
+        "author": "author",
+        "title": "titleFri Mar 05 2021 00:06:50 GMT+0530 (India Standard Time)",
+        "cost": 100.73094195146663
+      },
+      {
+        "id": "0.6182080014908804",
+        "author": "author",
+        "title": "titleFri Mar 05 2021 00:14:37 GMT+0530 (India Standard Time)",
+        "cost": 100.08000812856918
+      },
+      {
+        "id": "0.24784786121917968",
+        "author": "author",
+        "title": "titleFri Mar 05 2021 00:17:46 GMT+0530 (India Standard Time)",
+        "cost": 100.79338794129094
+      },
+      {
+        "id": "0.3089890870874492",
+        "author": "author",
+        "title": "titleFri Mar 05 2021 00:22:24 GMT+0530 (India Standard Time)",
+        "cost": 100.48197792357861
+      },
+      {
+        "id": "0.4029257985368597",
+        "title": "myTitle",
+        "author": "myAuthor",
+        "cost": 50.91790631881719
+      }
+    ],
+    "comments": [
+      {
+        "id": 1,
+        "body": "some comment",
+        "postId": 1
+      }
+    ],
+    "profile": {
+      "name": "typicode"
+    }
+  }
