@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,8 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
 import { ListcountryComponent } from './components/listcountry/listcountry.component';
 import { UpdatecountryComponent } from './components/updatecountry/updatecountry.component';
 import { ExpPipe } from './components/pipes/exp.pipe';
+import { BooksaddComponent } from './components/booksadd/booksadd.component';
+import { BookslistComponent } from './components/bookslist/bookslist.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +25,16 @@ import { ExpPipe } from './components/pipes/exp.pipe';
     PagenotfoundComponent,
     ListcountryComponent,
     UpdatecountryComponent,
-    ExpPipe
+    ExpPipe,
+    BooksaddComponent,
+    BookslistComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    FundstransferModule
+    FundstransferModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

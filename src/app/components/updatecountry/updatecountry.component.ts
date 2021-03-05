@@ -23,12 +23,18 @@ export class UpdatecountryComponent implements OnInit,OnDestroy {
     console.log("======================2..NG OnINIT..");
     this.aRoute.params.subscribe(params => {
       console.log("Value sent is..." + params['id']);
-      this.city= this.cService.getCountry(params['id']);
+      this.cService.getCountry(params['id']).then((cty)=>{
+        this.city = cty;
+      })
+      //this.city= this.cService.getCountry(params['id']);
     });
   }
 
   public goBack(){
-    this.loc.back();
+    this.cService.updateCountry(this.city).then(c=>{
+      this.loc.back();
+    })
+    
   }
 
 

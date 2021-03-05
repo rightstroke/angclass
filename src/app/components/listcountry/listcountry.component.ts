@@ -12,37 +12,48 @@ export class ListcountryComponent implements OnInit {
 
   myCities:City[]= [];
 
-  myCities2:City[] = [
-    { id: 1, cName: "Chennai", countryName: "India" },
-    { id: 4, cName: "Singapore City", countryName: "Singapore-APAC" }
-  ];
 
+  ngOnInit(): void {
+    this.countryService.getCountries().then((cities:City[])=>{
+      this.myCities = cities;
+      //throw new Error("Unknown Error" + new Date());
+    }).catch((err)=>{
+      console.log("in Error logs");
+      console.error(err);
+    }).finally(()=>{
+      console.log("All is Well - getCountries");
+    });
+  }
 
   constructor(private countryService:CountryService) { 
-    this.myCities = countryService.getCountries();
+    //this.myCities = countryService.getCountries();
   }
 
   public handleAddCity(c:City){
-    //console.log(JSON.stringify(c));
-    console.log(c);
-    this.countryService.addCountry(c);
+   this.countryService.addCountry(c).then((c)=>{
+     this.myCities.push(c);
+   });
   }
 
   public handleRemoveCity(ids:number){
-    this.countryService.removeCountry(ids);
+    this.countryService.removeCountry(ids).then((res)=>{
+      console.log(ids + "..Removed")
+    });
+
+
+    //this.countryService.removeCountry(ids);
     
     //console.log("the removed id is ..." + ids);
     //splice
-    //this.myCities.forEach((item,index)=>{
-    //  //console.log(JSON.stringify(item)+ ",idx==" + index);
-    //  if (item.id ==ids){
-    //    this.myCities.splice(index,1);
-    //  }
-    //});
+    this.myCities.forEach((item,index)=>{
+      //console.log(JSON.stringify(item)+ ",idx==" + index);
+      if (item.id ==ids){
+        this.myCities.splice(index,1);
+      }
+    });
   }
 
   
-  ngOnInit(): void {
-  }
+  
 
 }
