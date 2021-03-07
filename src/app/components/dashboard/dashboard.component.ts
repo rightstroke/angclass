@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import City from 'src/app/model/city';
+import { CountryService } from 'src/app/service/country.service';
 import { Auth } from '../../model/auth';
 
 @Component({
@@ -6,15 +8,31 @@ import { Auth } from '../../model/auth';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit,OnDestroy {
 
-  uid:string="";
+  uid:string="rsc";
   auth:any;
 
-  constructor() { }
+  inp:number = 5;
+
+  dte:Date = new Date();
+
+  constructor(private cService:CountryService) { 
+    
+  }
+
+  ngOnDestroy(): void {
+    
+  }
 
   ngOnInit(): void {
+    
     this.auth = sessionStorage.getItem("auth");
+  }
+
+  updatecity(){
+    let cty:City = new City(100,'Delhi','India');
+    this.cService.addCountry(cty);
   }
 
 }
