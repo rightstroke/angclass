@@ -7,17 +7,18 @@ import { ListcountryComponent } from './components/listcountry/listcountry.compo
 import { UpdatecountryComponent } from './components/updatecountry/updatecountry.component';
 import { BooksaddComponent } from './components/booksadd/booksadd.component';
 import { BookslistComponent } from './components/bookslist/bookslist.component';
+import { AuthGuard } from './guard/auth.guard';
 
 
 const routes: Routes = [
   {path : 'login', component:LoginComponent},
-  {path : 'dashboard',component:DashboardComponent,
+  {path : 'dashboard',component:DashboardComponent,canActivate:[AuthGuard],
     children : [
       {path : 'list', component:ListcountryComponent},
       {path : 'update/:id', component:UpdatecountryComponent},
       {path : '',redirectTo:'list',pathMatch:'full'}    
     ]},
-  {path:'bookadd',component:BooksaddComponent},
+  {path:'bookadd',component:BooksaddComponent,canActivate:[AuthGuard]},
   {path:'booklist',component:BookslistComponent},
   {path : '',redirectTo:'/login',pathMatch:'full'},
   {path: '**',component:PagenotfoundComponent}

@@ -20,3 +20,9 @@
         </td>
     </tr>
 </table>
+<button (click)="sendData()">SendData</button>
+<button (click)="clearData()">ClearData</button>
+<hr>
+<app-datalisten></app-datalisten>
+<hr>
+<app-datalisten *ngIf="isLoaded"></app-datalisten>

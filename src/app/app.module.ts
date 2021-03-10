@@ -15,6 +15,8 @@ import { UpdatecountryComponent } from './components/updatecountry/updatecountry
 import { ExpPipe } from './components/pipes/exp.pipe';
 import { BooksaddComponent } from './components/booksadd/booksadd.component';
 import { BookslistComponent } from './components/bookslist/bookslist.component';
+import { DatalistenComponent } from './components/datalisten/datalisten.component';
+import { AuthGuard } from './guard/auth.guard';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { BookslistComponent } from './components/bookslist/bookslist.component';
     UpdatecountryComponent,
     ExpPipe,
     BooksaddComponent,
-    BookslistComponent
+    BookslistComponent,
+    DatalistenComponent
   ],
   imports: [
     BrowserModule,
