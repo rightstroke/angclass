@@ -1,0 +1,22 @@
+<div>
+    <h3>Space</h3>
+    <div><input (keyup.Space)="onKeyUp($event)">
+        <p>{{text}}</p>
+    </div>
+    <h3>Enter</h3>
+    <div><input (keyup.enter)="onKeyUp($event)">
+        <p>{{text}}</p>
+    </div>
+    <h3>ALT - Z</h3>
+    <div><input (keyup.alt.z)="onKeyUp($event)">
+        <p>{{text}}</p>
+    </div>
+    <h3>Escape</h3>
+    <div><input (keyup.esc)="onKeyUp($event)">
+        <p>{{text}}</p>
+    </div>
+    <h3>Shift A</h3>
+    <div><input (keyup.shift.a)="onKeyUp($event)">
+        <p>{{text}}</p>
+    </div>
+</div>

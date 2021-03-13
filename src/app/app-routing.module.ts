@@ -8,6 +8,7 @@ import { UpdatecountryComponent } from './components/updatecountry/updatecountry
 import { BooksaddComponent } from './components/booksadd/booksadd.component';
 import { BookslistComponent } from './components/bookslist/bookslist.component';
 import { AuthGuard } from './guard/auth.guard';
+import { EventsComponent } from './components/events/events.component';
 
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
     ]},
   {path:'bookadd',component:BooksaddComponent,canActivate:[AuthGuard]},
   {path:'booklist',component:BookslistComponent},
+  {path:'eventhandle',component:EventsComponent},
   {path : '',redirectTo:'/login',pathMatch:'full'},
   {path: '**',component:PagenotfoundComponent}
 ];
